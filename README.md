@@ -25,25 +25,14 @@ npm install
 ```bash
 npm run start
 ```
-7. Error:
 ```bash
-> prueba2@1.0.0 start
-> npm run build && node build/index.js
+> test@1.0.0 start
+> tsc --outFile sample.js src/*.ts && node sample.js
 
-
-> prueba2@1.0.0 build
-> rimraf ./build && tsc
-
-/tmp/TypeScript-namespace/build/index.js:11
-validators["ZIP code"] = new Validation.ZipCodeValidator();
-                             ^
-
-ReferenceError: Validation is not defined
-    at Object.<anonymous> (/tmp/TypeScript-namespace/build/index.js:11:30)
-    at Module._compile (node:internal/modules/cjs/loader:1155:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1209:10)
-    at Module.load (node:internal/modules/cjs/loader:1033:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:868:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-    at node:internal/main/run_main_module:22:47
+"You" - Invalid ZIP code
+"You" - Valid Letters only
+"53454" - Valid ZIP code
+"53454" - Invalid Letters only
+"Hello" - Invalid ZIP code
+"Hello" - Valid Letters only
 ```
